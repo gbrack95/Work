@@ -13,7 +13,7 @@ def conversation():
     count = 0
     error_list = []
     start = time.time()
-    with open('nsse_2019.csv', newline='') as csv_file:
+    with open('survey_link_file.csv', newline='') as csv_file:
         reader = csv.DictReader(csv_file)
         for row in reader:
             user = row['SIS_ID']
