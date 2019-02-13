@@ -23,3 +23,18 @@ To set it up, you need to create an access token with admin level privileges:
     * The "Expires" field is a date for when you want the token to expire, after which you will need to generate a new one. It is always the best practice to regenerate tokens as soon as possible.
 
 4. Once the popup is filled out click the "Generate Token" button. Make sure to copy the token from the following "Access Token Details" popup, since once this popup is closed you cannot retrieve the token, you will have to generate a new one.
+
+5. You will insert the copied access token and the full school Canvas URL into the script, then initiate a new Canvas object:
+
+```python
+# test
+from canvasapi import Canvas
+from canvasapi.exceptions import CanvasException
+import csv
+import time
+
+API_URL = "https://school.instructure.com"
+API_KEY = "user access token"
+
+canvas = Canvas(API_URL, API_KEY)
+```
