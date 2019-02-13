@@ -74,4 +74,12 @@ body='This is the survey link ' + survey,
 subject='New Test',
 ```
 
-## Usage
+## How it Works
+
+1. The script opens the csv file and reads the contents line by line.
+
+2. One line at a time, it pulls the SIS ID and does and API call to Canvas to check their existence. If the user does not exist, it will save them to an error list and move on.
+
+3. If the user exists it will then create an individual Canvas email which will include the body and subject message that is to be sent. If the Canvas email was unable to be created the user will be saved to an error list and the it will move on to the next user.
+
+4. Once the script has repeated this process for every record in the csv file, it will print the count of successful emails, the list of error users and the time elapsed in seconds. This is all for reference and verification. 
