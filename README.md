@@ -63,9 +63,7 @@ lname = row['LASTNAME']
 survey = row['SURVEYLINK']
 ```
 
-8. Finally, you will need to change to content of the message you want to be sent:
-
-(*note only change the body and subject*)
+8. Finally, you will need to change to content of the message you want to be sent: (*note only change the body and subject*)
 
 ```python
 # Edit or replace the message in the body to reflect what is to be sent, then pass in the survey link from the variable saved above called 'survey'
