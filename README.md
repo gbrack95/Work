@@ -41,3 +41,26 @@ API_KEY = "user access token"
 # Initiate a new Canvas object
 canvas = Canvas(API_URL, API_KEY)
 ```
+
+6. You will need to prepare a csv file that contains the SIS ID, first name, last name and unique survey link for every student the message is intended for.
+
+7. You will need to adjust the naming convention to reflect that of your file and previously specified columns so the script knows what to look for:
+
+```python
+# Change 'survey_link_file.csv' to the name of the csv file saved from step 6
+with open('survey_link_file.csv', newline='') as csv_file:
+
+# Change 'SIS_ID' to the column name for the SIS ID numbers column
+user = row['SIS_ID']
+
+# Change 'FIRSTNAME' to the column name for the first name column
+fname = row['FIRSTNAME']
+
+# Change 'LASTNAME' to the column name for the last name column
+lname = row['LASTNAME']
+
+# Change 'SURVEYLINK' to the column name for the unique survey link column
+survey = row['SURVEYLINK']
+```
+
+## Usage
