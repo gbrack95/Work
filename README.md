@@ -27,7 +27,7 @@ To set it up, you need to create an access token with admin level privileges:
 5. You will insert the copied access token and the full school Canvas URL into the script, then initiate a new Canvas object:
 
 ```python
-# test
+*# test*
 from canvasapi import Canvas
 from canvasapi.exceptions import CanvasException
 import csv
