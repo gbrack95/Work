@@ -27,14 +27,17 @@ To set it up, you need to create an access token with admin level privileges:
 5. You will insert the copied access token and the full school Canvas URL into the script, then initiate a new Canvas object:
 
 ```python
-_# test_
+# Import the Canvas class, Canvas Exceptions, csv and time(optional)
 from canvasapi import Canvas
 from canvasapi.exceptions import CanvasException
 import csv
 import time
 
+# Institutions fully qualified domain name as Canvas API URL
 API_URL = "https://school.instructure.com"
+# Previously copied user access token as Canvas API Key
 API_KEY = "user access token"
 
+# Initiate a new Canvas object
 canvas = Canvas(API_URL, API_KEY)
 ```
